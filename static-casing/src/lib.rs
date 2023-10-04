@@ -6,10 +6,10 @@ mod tests {
     #[test]
     fn tests() {
         
-        assert_eq!("PascalCase", pascal_case!("pascal_case"));
-        assert_eq!("snake_case", snake_case!("SnakeCase"));
-        assert_eq!("camelCase", camel_case!("camel_case"));
-        assert_eq!("camelCase", camel_case!("CamelCase"));
-        assert_eq!("camelCase", camel_case!("camelCase"));
+        assert_eq!("PascalCase", pascal_case!(lit -> lit; "pascal_case"));
+        assert_eq!("snake_case", snake_case!(lit -> lit; "SnakeCase"));
+        assert_eq!("camelCase", camel_case!(lit -> lit; "camel_case"));
+        assert_eq!("camelCase", camel_case!(lit -> lit; "CamelCase"));
+        assert_eq!("camelCase", camel_case!(lit -> lit; "camelCase"));
     }    
 }
